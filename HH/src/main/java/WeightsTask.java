@@ -18,8 +18,12 @@ public class WeightsTask {
         WeightsTaskResolver resolver = new WeightsTaskResolver();
         List<List<Integer>> equalsSubLists = new WeightsTaskResolver().findEqualsSubLists(array);
 
-        System.out.println(equalsSubLists.get(0));
-        System.out.println(equalsSubLists.get(1));
+        if (equalsSubLists != null){
+            System.out.println(equalsSubLists.get(0));
+            System.out.println(equalsSubLists.get(1));
+        }else {
+            System.out.println("can't divide array");
+        }
         System.out.println(resolver.checkContainsWeight(array, 100) ? "yes" : "no");
     }
 }
